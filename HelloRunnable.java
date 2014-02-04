@@ -6,6 +6,9 @@ public class HelloRunnable implements Runnable {
 	}
     public void run() {
         System.out.println("Hello from a thread!"+ii);
+    	try{Thread.sleep(4000);}
+    	catch(InterruptedException e){return;}
+    	System.out.println("Hey"+ii);
     }
 
     public static void main(String args[]) {
